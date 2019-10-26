@@ -2,6 +2,8 @@
 
 A small HTTP server that updates GitHub commit status checks when GitLab job status webhook events occur.
 
+![Image of the GitHub status checks this tool makes][ss]
+
 ## Available Env Vars
 
 * `GH_TOKEN` - *(required)* GitHub personal access token for creating status checks
@@ -51,3 +53,4 @@ This sets up the webhook at `http://0.0.0.0:12345/.gl-webhook`.
   * An easy way to do commit mirroring is with [`git-mirror-docker`][git-mirror-docker]
 
 [git-mirror-docker]: https://github.com/flotwig/git-mirror-docker/
+[ss]: https://i.imgur.com/wvCW1Up.png
