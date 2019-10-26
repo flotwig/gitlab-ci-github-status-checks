@@ -88,7 +88,7 @@ function getPipelineUrl(payload) {
 }
 
 function getJobDescription(payload) {
-  return `status: ${payload.build_status}${payload.build_failure_reason ? ` failure reason: ${payload.build_failure_reason}` : ''}`
+  return `${payload.build_status}${payload.build_status === 'failed' ? ` - reason: ${payload.build_failure_reason}` : ''}`
 }
 
 function getJobUrl(payload) {
@@ -97,6 +97,7 @@ function getJobUrl(payload) {
 
 function getGitHubStatus(gitlabStatus) {
   return ({
+    'success': 'success',
     'failed': 'failure',
     'passed': 'success'
   })[gitlabStatus] || 'pending'
