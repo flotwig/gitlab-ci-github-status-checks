@@ -2,6 +2,8 @@
 
 A small HTTP server that updates GitHub commit status checks when GitLab job status webhook events occur.
 
+With this and [`git-mirror-docker`][git-mirror-docker], you can get the functionality of GitLab.com's "GitHub Integration" (no longer free after 2020) and GitLab EE's "GitHub Integration" using a regular GitLab CE installation.
+
 ![Image of the GitHub status checks this tool makes][ss]
 
 ## Available Env Vars
