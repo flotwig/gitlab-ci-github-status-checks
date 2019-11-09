@@ -44,7 +44,7 @@ function createWebhookHandler(octokit) {
       state,
       target_url,
       description,
-      context: `ci:${payload.build_stage}`
+      context: `ci:${payload.build_name}`
     })
     .then(console.log)
     .catch(console.error)
